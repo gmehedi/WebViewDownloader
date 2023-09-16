@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "63EDA885-2EBE-48AA-B3BA-07C7FF9EA9AC"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B5F978D2-FACD-463A-B37F-F2C06144119E"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WKWebViewDownloadHelper/ViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "56"
+            endingLineNumber = "56"
+            landmarkName = "didFailDownloadingFile(error:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "4422E5D2-B2F6-4D9F-8282-F80A0DC27087"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WKWebViewDownloadHelper/ViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "60"
+            endingLineNumber = "60"
+            landmarkName = "didDownloadFile(atUrl:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D77E517B-FFC5-4E98-BDEB-345BDFCB1C3B"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WKWebViewDownloadHelper/ViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "78"
+            endingLineNumber = "78"
+            landmarkName = "webView(_:decidePolicyFor:decisionHandler:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "D77E517B-FFC5-4E98-BDEB-345BDFCB1C3B - b35500c8ba8d66eb"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "WKWebViewDownloadHelper.ViewController.webView(_: __C.WKWebView, decidePolicyFor: __C.WKNavigationResponse, decisionHandler: (__C.WKNavigationResponsePolicy) -&gt; ()) -&gt; ()"
+                  moduleName = "WKWebViewDownloadHelper"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mmmehedihasan/Desktop/WKWebViewDownloadHelper-master/WKWebViewDownloadHelper/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "78"
+                  endingLineNumber = "78"
+                  offsetFromSymbolStart = "452">
+               </Location>
+               <Location
+                  uuid = "D77E517B-FFC5-4E98-BDEB-345BDFCB1C3B - b35500c8ba8d66eb"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "WKWebViewDownloadHelper.ViewController.webView(_: __C.WKWebView, decidePolicyFor: __C.WKNavigationResponse, decisionHandler: (__C.WKNavigationResponsePolicy) -&gt; ()) -&gt; ()"
+                  moduleName = "WKWebViewDownloadHelper"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mmmehedihasan/Desktop/WKWebViewDownloadHelper-master/WKWebViewDownloadHelper/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "78"
+                  endingLineNumber = "78"
+                  offsetFromSymbolStart = "540">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D77ED1FF-BE3C-49F8-B26F-A5DD36017F65"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WKWebViewDownloadHelper/ViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "86"
+            endingLineNumber = "86"
+            landmarkName = "webView(_:decidePolicyFor:decisionHandler:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
