@@ -10,26 +10,78 @@ import WebKit
 import WKDownloadHelper
 
 class ViewController: UIViewController {
-    var webView:WKWebView!
+    var webView:WKWebView?
     //var helper:WKWebviewDownloadHelper!
     var downloadHelper: WKDownloadHelper!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+     
+     
+      //  self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .close, target: nil, action: nil)
+        
+        //downloadHelper.downloadData(from
+        
+    }
+    
+    
+    @IBAction func tappedOnDSownload(_ sender: Any) {
+        self.handleDownload()
+    }
+    
+    @IBAction func tappedOnUploadButton(_ sender: Any) {
+        self.handleUpload()
+    }
+    @IBAction func tappedOnCancelButton(_ sender: Any) {
+       // self.navigationController?.popViewController(animated: true)
+        self.webView?.removeFromSuperview()
+    }
+    
+    func handleUpload() {
+        
+        self.webView?.removeFromSuperview()
         
         let webView = WKWebView(frame: self.view.frame)
         self.view.addSubview(webView)
         webView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        self.navigationItem.title = "My Page"
+        self.webView = webView
         let mimeTypes = [MimeType(type: "ms-excel", fileExtension: "jpg"),
-                         MimeType(type: "pdf", fileExtension: "png")]
+                         MimeType(type: "pdf", fileExtension: "png"),
+                         MimeType(type: "pdf", fileExtension: "pdf")]
         //helper = WKWebviewDownloadHelper(webView: webView, mimeTypes:mimeTypes, delegate: self)
         downloadHelper = WKDownloadHelper(webView: webView, supportedMimeTypes: mimeTypes, delegate: self)
 
-        let request = URLRequest(url: URL(string: "https://we.tl/t-zs3JHwU03I")!)
+       
+        let url = URL(string: "https://wetransfer.com/")!
+        
+        let request = URLRequest(url: url)
         webView.load(request)
-        self.webView = webView
+    }
+    
+    func handleDownload() {
+    
+        self.webView?.removeFromSuperview()
+        
+        let webView = WKWebView(frame: self.view.frame)
+        self.view.addSubview(webView)
+        webView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         self.navigationItem.title = "My Page"
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .close, target: nil, action: nil)
+        self.webView = webView
+        
+        let mimeTypes = [MimeType(type: "ms-excel", fileExtension: "jpg"),
+                         MimeType(type: "pdf", fileExtension: "png"),
+                         MimeType(type: "pdf", fileExtension: "pdf"),
+                         MimeType(type: "pdf", fileExtension: "doc")]
+        //helper = WKWebviewDownloadHelper(webView: webView, mimeTypes:mimeTypes, delegate: self)
+        downloadHelper = WKDownloadHelper(webView: webView, supportedMimeTypes: mimeTypes, delegate: self)
+
+        //let url = URL(string: "https://we.tl/t-zs3JHwU03I")! //Working
+        
+        let url = URL(string: "https://file-examples.com/")!
+    
+        let request = URLRequest(url: url)
+        webView.load(request)
         
     }
 }

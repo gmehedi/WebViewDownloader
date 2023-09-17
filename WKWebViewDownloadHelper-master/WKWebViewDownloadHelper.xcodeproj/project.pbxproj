@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,7 +13,10 @@
 		254405F924AFB44C00C32DC8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 254405F724AFB44C00C32DC8 /* Main.storyboard */; };
 		254405FB24AFB44E00C32DC8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 254405FA24AFB44E00C32DC8 /* Assets.xcassets */; };
 		254405FE24AFB44E00C32DC8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 254405FC24AFB44E00C32DC8 /* LaunchScreen.storyboard */; };
-		258F07082674DAF6003DC7EF /* WKDownloadHelper in Frameworks */ = {isa = PBXBuildFile; productRef = 258F07072674DAF6003DC7EF /* WKDownloadHelper */; };
+		CEA0A8392AB6BB1600F35652 /* WKDownloadHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA0A8352AB6BB1600F35652 /* WKDownloadHelper.swift */; };
+		CEA0A83A2AB6BB1600F35652 /* WKDownloadHelperDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA0A8362AB6BB1600F35652 /* WKDownloadHelperDelegate.swift */; };
+		CEA0A83B2AB6BB1600F35652 /* WKDownloadHelper+types.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA0A8372AB6BB1600F35652 /* WKDownloadHelper+types.swift */; };
+		CEA0A83C2AB6BB1600F35652 /* WKDownloadHelper+delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA0A8382AB6BB1600F35652 /* WKDownloadHelper+delegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +29,10 @@
 		254405FD24AFB44E00C32DC8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		254405FF24AFB44E00C32DC8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2544060524AFB47500C32DC8 /* WKWebViewDownloadHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WKWebViewDownloadHelper.swift; sourceTree = "<group>"; };
+		CEA0A8352AB6BB1600F35652 /* WKDownloadHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WKDownloadHelper.swift; sourceTree = "<group>"; };
+		CEA0A8362AB6BB1600F35652 /* WKDownloadHelperDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WKDownloadHelperDelegate.swift; sourceTree = "<group>"; };
+		CEA0A8372AB6BB1600F35652 /* WKDownloadHelper+types.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "WKDownloadHelper+types.swift"; sourceTree = "<group>"; };
+		CEA0A8382AB6BB1600F35652 /* WKDownloadHelper+delegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "WKDownloadHelper+delegate.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,7 +40,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				258F07082674DAF6003DC7EF /* WKDownloadHelper in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,12 +69,32 @@
 				254405F324AFB44C00C32DC8 /* SceneDelegate.swift */,
 				254405F524AFB44C00C32DC8 /* ViewController.swift */,
 				2544060524AFB47500C32DC8 /* WKWebViewDownloadHelper.swift */,
+				CEA0A8332AB6BB1600F35652 /* Sources */,
 				254405F724AFB44C00C32DC8 /* Main.storyboard */,
 				254405FA24AFB44E00C32DC8 /* Assets.xcassets */,
 				254405FC24AFB44E00C32DC8 /* LaunchScreen.storyboard */,
 				254405FF24AFB44E00C32DC8 /* Info.plist */,
 			);
 			path = WKWebViewDownloadHelper;
+			sourceTree = "<group>";
+		};
+		CEA0A8332AB6BB1600F35652 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				CEA0A8342AB6BB1600F35652 /* WKDownloadHelper */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		CEA0A8342AB6BB1600F35652 /* WKDownloadHelper */ = {
+			isa = PBXGroup;
+			children = (
+				CEA0A8352AB6BB1600F35652 /* WKDownloadHelper.swift */,
+				CEA0A8362AB6BB1600F35652 /* WKDownloadHelperDelegate.swift */,
+				CEA0A8372AB6BB1600F35652 /* WKDownloadHelper+types.swift */,
+				CEA0A8382AB6BB1600F35652 /* WKDownloadHelper+delegate.swift */,
+			);
+			path = WKDownloadHelper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -88,7 +114,6 @@
 			);
 			name = WKWebViewDownloadHelper;
 			packageProductDependencies = (
-				258F07072674DAF6003DC7EF /* WKDownloadHelper */,
 			);
 			productName = WKWebViewDownloadHelper;
 			productReference = 254405EE24AFB44C00C32DC8 /* WKWebViewDownloadHelper.app */;
@@ -119,7 +144,6 @@
 			);
 			mainGroup = 254405E524AFB44C00C32DC8;
 			packageReferences = (
-				258F07062674DAF6003DC7EF /* XCRemoteSwiftPackageReference "WKDownloadHelper" */,
 			);
 			productRefGroup = 254405EF24AFB44C00C32DC8 /* Products */;
 			projectDirPath = "";
@@ -149,8 +173,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				254405F624AFB44C00C32DC8 /* ViewController.swift in Sources */,
+				CEA0A83B2AB6BB1600F35652 /* WKDownloadHelper+types.swift in Sources */,
 				254405F224AFB44C00C32DC8 /* AppDelegate.swift in Sources */,
 				254405F424AFB44C00C32DC8 /* SceneDelegate.swift in Sources */,
+				CEA0A83C2AB6BB1600F35652 /* WKDownloadHelper+delegate.swift in Sources */,
+				CEA0A8392AB6BB1600F35652 /* WKDownloadHelper.swift in Sources */,
+				CEA0A83A2AB6BB1600F35652 /* WKDownloadHelperDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -295,8 +323,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = S27FAGF43P;
+				DEVELOPMENT_TEAM = 3DSVZ6QBL9;
 				INFOPLIST_FILE = WKWebViewDownloadHelper/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -313,8 +342,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = S27FAGF43P;
+				DEVELOPMENT_TEAM = 3DSVZ6QBL9;
 				INFOPLIST_FILE = WKWebViewDownloadHelper/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -348,25 +378,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		258F07062674DAF6003DC7EF /* XCRemoteSwiftPackageReference "WKDownloadHelper" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/gualtierofrigerio/WKDownloadHelper";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 0.2.3;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		258F07072674DAF6003DC7EF /* WKDownloadHelper */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 258F07062674DAF6003DC7EF /* XCRemoteSwiftPackageReference "WKDownloadHelper" */;
-			productName = WKDownloadHelper;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 254405E624AFB44C00C32DC8 /* Project object */;
 }

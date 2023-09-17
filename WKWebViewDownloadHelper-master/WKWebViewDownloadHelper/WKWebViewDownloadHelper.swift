@@ -130,32 +130,4 @@ extension WKWebviewDownloadHelper: WKNavigationDelegate {
         }
         decisionHandler(.allow)
     }
-
-    @available(iOS 14.5, *)
-    func webView(_ webView: WKWebView, navigationResponse: WKNavigationResponse, didBecome download: WKDownload) {
-        print(" navigationresponse didbecome download ")
-        download.delegate = self
-    }
-}
-
-@available(iOS 14.5, *)
-extension WKWebviewDownloadHelper: WKDownloadDelegate {
-    func download(_ download: WKDownload, decideDestinationUsing response: URLResponse, suggestedFilename: String, completionHandler: @escaping (URL?) -> Void) {
-        let temporaryDir = NSTemporaryDirectory()
-        let fileName = temporaryDir + "/" + suggestedFilename
-        let url = URL(fileURLWithPath: fileName)
-        fileDestinationURL = url
-        completionHandler(url)
-    }
-    
-    func download(_ download: WKDownload, didFailWithError error: Error, resumeData: Data?) {
-        print("download failed \(error)")
-    }
-    
-    func downloadDidFinish(_ download: WKDownload) {
-        print("download finish")
-        if let url = fileDestinationURL {
-            self.delegate.fileDownloadedAtURL(url: url)
-        }
-    }
 }
